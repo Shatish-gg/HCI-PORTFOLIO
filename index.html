@@ -7,8 +7,98 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link rel="stylesheet" href="style.css">
+
+    <!-- Futuristic Background Styles -->
+    <style>
+        body {
+            background-color: #030712; /* Deep space dark canvas */
+            color: #f3f4f6;
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        /* Digital Grid Network Overlay */
+        .cyber-grid {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: 
+                linear-gradient(rgba(6, 182, 212, 0.04) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(6, 182, 212, 0.04) 1px, transparent 1px);
+            background-size: 50px 50px;
+            background-position: center;
+            z-index: -2;
+            pointer-events: none;
+        }
+
+        /* Scanline matrix effect */
+        .cyber-grid::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: linear-gradient(
+                rgba(18, 16, 16, 0) 50%, 
+                rgba(0, 0, 0, 0.25) 50%
+            );
+            background-size: 100% 4px;
+            z-index: -2;
+        }
+
+        /* Floating Neon Plasma Orbs */
+        .ambient-glow {
+            position: fixed;
+            width: 60vw;
+            height: 60vw;
+            max-width: 600px;
+            max-height: 600px;
+            border-radius: 50%;
+            pointer-events: none;
+            z-index: -1;
+            filter: blur(120px);
+            opacity: 0.4;
+            mix-blend-mode: screen;
+            animation: floatGlow 20s infinite alternate ease-in-out;
+        }
+
+        .glow-cyan {
+            top: -10%;
+            left: -10%;
+            background: radial-gradient(circle, rgba(6, 182, 212, 0.6) 0%, rgba(0,0,0,0) 70%);
+        }
+
+        .glow-blue {
+            bottom: -10%;
+            right: -10%;
+            background: radial-gradient(circle, rgba(59, 130, 246, 0.5) 0%, rgba(0,0,0,0) 70%);
+            animation-delay: -10s;
+        }
+
+        /* Subtle glowing selector for your highlight text */
+        .highlight-glow {
+            text-shadow: 0 0 20px rgba(6, 182, 212, 0.6);
+        }
+
+        @keyframes floatGlow {
+            0% {
+                transform: translate(0, 0) scale(1);
+            }
+            50% {
+                transform: translate(80px, 50px) scale(1.1);
+            }
+            100% {
+                transform: translate(-40px, 100px) scale(0.9);
+            }
+        }
+    </style>
 </head>
 <body>
+
+    <!-- Futuristic Background Elements -->
+    <div class="cyber-grid"></div>
+    <div class="ambient-glow glow-cyan"></div>
+    <div class="ambient-glow glow-blue"></div>
 
     <header class="navbar">
         <div class="logo">SHATISH <span>AGILAN</span></div>
@@ -35,7 +125,7 @@
                 <a href="#contact" class="btn btn-outline">Get In Touch</a>
             </div>
             <div class="scroll-down">
-                <i class="fa-solid :fa-arrow-down"></i>
+                <i class="fa-solid fa-arrow-down"></i>
                 <div class="social-icons-mini">
                     <a href="mailto:shatishagilan@gmail.com"><i class="fa-regular fa-envelope"></i></a>
                     <a href="https://my.linkedin.com/in/shatish-agilan-840650324"><i class="fa-brands fa-linkedin-in"></i></a>
@@ -51,7 +141,6 @@
             <div class="profile-box">
                 <div class="profile-img-placeholder">
                     <img src="profile.png" alt="Shatish Agilan" onerror="this.style.display='none';">
-                    <!-- <i class="fa-regular fa-user" style="font-size: 4rem; color: var(--accent-cyan); opacity: 0.3;"></i> -->
                 </div>
             </div>
             
