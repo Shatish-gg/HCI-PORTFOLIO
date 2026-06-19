@@ -161,7 +161,7 @@ h1, h2, h3, h4, h5 {
 
 .highlight-glow {
     color: var(--accent-cyan);
-    text-shadow: 0 0 20px rgba(62, 212, 236, 0.10);
+    text-shadow: 0 0 20px rgba(62, 212, 236, 0.6);
 }
 
 .hero-container h2 {
