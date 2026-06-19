@@ -394,14 +394,20 @@ h1, h2, h3, h4, h5 {
 
 .achievement-badge {
     margin-top: 15px;
-    background-color: rgba(234, 179, 8, 0.05);
-    border: 1px solid rgba(234, 179, 8, 0.2);
+    background-color: rgba(234, 179, 8, 0.08); /* Slightly boosted background presence */
+    border: 1px solid rgba(234, 179, 8, 0.4);   /* Brightened border line */
     color: #f59e0b;
     padding: 10px 15px;
     border-radius: 8px;
     font-size: 0.85rem;
+    
+    /* Neon glow layers */
+    box-shadow: 0 0 15px rgba(234, 179, 8, 0.25),        /* Outward soft aura */
+                inset 0 0 10px rgba(234, 179, 8, 0.1);    /* Inward soft containment glow */
+    
+    /* Text light radiation */
+    text-shadow: 0 0 8px rgba(245, 158, 11, 0.4);
 }
-
 .row-split {
     display: flex;
     justify-content: space-between;
@@ -423,6 +429,50 @@ h1, h2, h3, h4, h5 {
     display: inline-block;
     width: 1em;
 }
+
+/* Container spacing */
+.co-curricular-container {
+    margin-top: 5px;
+}
+
+.co-curricular-title {
+    color: #94a3b8; /* Muted gray title */
+    font-size: 0.9rem;
+    margin-bottom: 12px;
+    font-weight: 600;
+}
+
+/* The box layout wrapper */
+.co-curricular-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: row; /* Aligns them horizontally */
+    flex-wrap: wrap;     /* Allows them to drop to the next line if space runs out */
+    gap: 8px;
+}
+
+/* Individual activity boxes */
+.co-curricular-list li {
+    background-color: rgba(6, 182, 212, 0.03); /* Subtle dark cyan tint */
+    border: 1px solid rgba(6, 182, 212, 0.15); /* Soft cyan border matching your theme */
+    color: #e2e8f0; /* Crisp light text color */
+    padding: 10px 16px;
+    border-radius: 6px;
+    font-size: 0.88rem;
+    font-weight: 500;
+    transition: all 0.25s ease-in-out;
+    display: block;
+}
+
+/* Subtle interactive hover effect */
+/* .co-curricular-list li:hover {
+    background-color: rgba(6, 182, 212, 0.08);
+    border-color: rgba(6, 182, 212, 0.4);
+    box-shadow: 0 0 12px rgba(6, 182, 212, 0.15);
+    transform: translateX(4px); /* Elegant slide-right hint on hover */
+ */
 
 /* Projects Showcase Styling */
 .projects-stack {
